@@ -6,7 +6,7 @@ function Home() {
 
   useEffect(() => {
     // Fetch data from backend API
-    fetch('http://localhost:2000/api/team')
+    fetch('https://portfolio-j1vk.onrender.com/api/team')
       .then(response => response.json())  // Convert the response to JSON
       .then(data => {
         console.log('Fetched team members:', data); // Log the fetched team members

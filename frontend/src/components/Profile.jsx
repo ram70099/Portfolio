@@ -4,14 +4,14 @@ import { useParams, Link } from 'react-router-dom';
 function Profile() {
   const { id } = useParams();
   const [teamMembers, setTeamMembers] = useState([]); // State to store team members
-  const [selectedTech, setSelectedTech] = useState('MERN'); // Track selected technology
+  const [selectedTech, setSelectedTech] = useState(''); // Track selected technology
   const [loading, setLoading] = useState(true); // Loading state for the API call
 
   useEffect(() => {
     // Fetch team members from the backend
     const fetchTeamMembers = async () => {
       try {
-        const response = await fetch('http://localhost:2000/api/team',);
+        const response = await fetch('https://portfolio-j1vk.onrender.com/api/team',);
         const data = await response.json();
         setTeamMembers(data);  // Store the team members data in state
         setLoading(false);      // Set loading to false once data is fetched
